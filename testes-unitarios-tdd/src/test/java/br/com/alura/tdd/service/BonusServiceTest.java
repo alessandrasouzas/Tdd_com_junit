@@ -17,15 +17,15 @@ class BonusServiceTest {
 	void bonusDeveriaSerZeroParaFuncionarioComSalarioMuitoAlto() {
 		BonusService service = new BonusService();
 		
-//		assertThrows(IllegalArgumentException.class, 
-//			() -> service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000"))));
+		assertThrows(IllegalArgumentException.class, 
+			() -> service.calcularBonus(new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000"))));
 		
-		try {
-			service.calcularBonus( new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000")));
-			fail("Nao lancou exception");
-		} catch (Exception e) {
-			// Implementação possui vantagem quando precisa pegar a msg da exceção
-		}
+//		try {
+//			service.calcularBonus( new Funcionario("Rodrigo", LocalDate.now(), new BigDecimal("25000")));
+//			fail("Nao lancou exception");
+//		} catch (Exception e) {
+//			// Implementação possui vantagem quando precisa pegar a msg da exceção
+//		}
 	
 	}
 
